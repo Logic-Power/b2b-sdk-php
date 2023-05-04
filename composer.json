@@ -1,0 +1,22 @@
+{
+    "name": "logic-power/b2b-sdk-php",
+    "description": "LogicPower B2B SDK - Доступная интеграция API от LogicPower B2B",
+    "type": "library",
+    "homepage": "https://b2b.logicpower.ua",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LogicPower\\": "src"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/logic-power/b2b-sdk-php/issues",
+        "docs": "https://b2b.logicpower.ua/token/docs",
+        "chat": "https://b2b.logicpower.ua/contacts"
+    }
+}
