@@ -88,6 +88,7 @@ class LogicPower
         $request->mergeOptions([
             'headers' => [
                 'X-Api-Key' => $this->apiKey,
+                'X-Sdk-Version' => Version::getVersion(),
             ],
         ]);
 
@@ -96,8 +97,6 @@ class LogicPower
 
     /**
      * Динамический вызов метода.
-     *
-     * @return mixed
      *
      * @throws \ReflectionException
      */
