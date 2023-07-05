@@ -96,7 +96,7 @@ class CurrencyRate
     }
 
     /**
-     * Создание из массива.
+     * {@inheritdoc}
      */
     public static function fromArray(array $array): self
     {

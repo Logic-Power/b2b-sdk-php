@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace LogicPower\Api\GetProducts\Resource;
 
 use LogicPower\Api\Shared\Enum\Currency;
+use LogicPower\Api\Shared\Resource\ArrayTransformerTrait;
 
 class Money
 {
+    use ArrayTransformerTrait;
+
     /**
      * Сумма.
      *
@@ -52,7 +55,7 @@ class Money
     }
 
     /**
-     * Создание из массива.
+     * {@inheritdoc}
      */
     public static function fromArray(array $array): self
     {
