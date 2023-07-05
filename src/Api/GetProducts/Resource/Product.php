@@ -32,6 +32,13 @@ class Product
     private $code;
 
     /**
+     * Артикул.
+     *
+     * @var string|null
+     */
+    private $sku;
+
+    /**
      * Штрихкод.
      *
      * @var string|null
@@ -125,6 +132,7 @@ class Product
     public function __construct(
         string $id,
         string $code,
+        ?string $sku,
         ?string $barcode,
         array $name,
         array $description,
@@ -140,6 +148,7 @@ class Product
     ) {
         $this->id = $id;
         $this->code = $code;
+        $this->sku = $sku;
         $this->barcode = $barcode;
         $this->name = $name;
         $this->description = $description;
@@ -168,6 +177,14 @@ class Product
     public function getCode(): string
     {
         return $this->code;
+    }
+
+    /**
+     * Получение артикула.
+     */
+    public function getSku(): ?string
+    {
+        return $this->sku;
     }
 
     /**
@@ -312,6 +329,7 @@ class Product
         return new self(
             $array['id'],
             $array['code'],
+            $array['sku'],
             $array['barcode'],
             $array['name'],
             $array['description'],
