@@ -1,4 +1,8 @@
-[<p align="center"><img src=".github/logic-power-logo.svg" height="80"/>&nbsp;&nbsp;&nbsp;<img src=".github/php-logo.svg" height="80"/></p>](https://b2b.logicpower.ua)
+<p align="center">
+    <img src=".github/logic-power-logo.svg" height="80"/>
+    &nbsp;&nbsp;&nbsp;
+    <img src=".github/php-logo.svg" height="80"/>
+</p>
 
 # LogicPower B2B SDK для PHP
 
