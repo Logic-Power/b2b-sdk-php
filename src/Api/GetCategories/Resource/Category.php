@@ -21,6 +21,13 @@ class Category
     private $id;
 
     /**
+     * Код.
+     *
+     * @var string
+     */
+    private $code;
+
+    /**
      * Название.
      *
      * @var array
@@ -39,9 +46,10 @@ class Category
      *
      * @param self[] $children
      */
-    public function __construct(string $id, array $name, array $children)
+    public function __construct(string $id, string $code, array $name, array $children)
     {
         $this->id = $id;
+        $this->code = $code;
         $this->name = $name;
         $this->children = $children;
     }
@@ -52,6 +60,14 @@ class Category
     public function getId(): string
     {
         return $this->id;
+    }
+
+    /**
+     * Получение кода.
+     */
+    public function getCode(): string
+    {
+        return $this->code;
     }
 
     /**
@@ -85,6 +101,11 @@ class Category
             return self::fromArray($array);
         }, $array['children'] ?? []);
 
-        return new self($array['id'], $array['name'], $children);
+        return new self(
+            $array['id'],
+            $array['code'],
+            $array['name'],
+            $children
+        );
     }
 }
